@@ -1,6 +1,6 @@
 {
   "name": "@hometownjs/npm-proxy",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "HoMeTown's npm proxy setting guidelines.",
   "author": {
     "name": "HoMeTownJS",
@@ -23,7 +23,7 @@
     },
     "./*": "./*"
   },
-  "main": "index.mjs",
+  "main": "./dist/index.mjs",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
