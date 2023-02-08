@@ -1,0 +1,57 @@
+{
+  "name": "@hometownjs/npm-proxy",
+  "version": "0.0.1",
+  "private": true,
+  "description": "HoMeTown's npm proxy setting guidelines.",
+  "author": {
+    "name": "HoMeTownJS",
+    "email": "hometownsocool@gmail.com",
+    "url": "https://github.com/HoMeTownJS"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/HoMeTownJS/hometown-npm-proxy",
+  "repository": {
+    "url": "https://github.com/HoMeTownJS/hometown-npm-proxy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/HoMeTownJS/hometown-npm-proxy/issues"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "lint": "eslint . --fix",
+    "commit": "hometown git-commit",
+    "cleanup": "hometown cleanup",
+    "update-pkg": "hometown update-pkg",
+    "update-version": "bumpp package.json",
+    "publish-pkg": "pnpm -r publish --access public",
+    "init-git-hooks": "hometown init-git-hooks",
+    "release": "pnpm update-version && pnpm publish-pkg",
+    "lint-staged": "lint-staged"
+  },
+  "devDependencies": {
+    "@hometownjs/command": "^0.0.1",
+    "@hometownjs/eslint-config-ts": "^0.0.3",
+    "bumpp": "^8.2.1",
+    "eslint": "8.33.0",
+    "lint-staged": "^13.1.0",
+    "rimraf": "^3.0.2",
+    "simple-git-hooks": "^2.8.1",
+    "tsup": "^6.5.0",
+    "typescript": "4.9.5"
+  },
+  "simple-git-hooks": {
+    "commit-msg": "pnpm hometown git-commit-verify",
+    "pre-commit": "pnpm exec lint-staged --concurrent false"
+  },
+  "lint-staged": {
+    "*": [
+      "eslint . --fix"
+    ]
+  }
+}
