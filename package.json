@@ -1,7 +1,6 @@
 {
   "name": "@hometownjs/npm-proxy",
   "version": "0.0.1",
-  "private": true,
   "description": "HoMeTown's npm proxy setting guidelines.",
   "author": {
     "name": "HoMeTownJS",
