@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="220px" src="https://i.ibb.co/rGK4hCV/i-va-6.png" />
+  <img width="220px" src="https://github.com/HoMeTownJS/site/blob/main/public/images/logo-vertical.png?raw=true" />
 </p>
 <p align="center"><b>✨ hometown-npm-proxy 💥</b></p>
 <p align="center">HoMeTown's npm proxy setting guidelines.</p>
